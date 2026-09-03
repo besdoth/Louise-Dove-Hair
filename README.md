@@ -54,6 +54,10 @@ Defined in `src/index.css`, applied with per-element `animationDelay`.
 Pushing to the default branch builds the site and publishes it to GitHub Pages
 via `.github/workflows/deploy-pages.yml`.
 
+One-time setup: **Settings → Pages → Build and deployment → Source: GitHub
+Actions**. This cannot be automated — the workflow's `GITHUB_TOKEN` is not
+allowed to create a Pages site.
+
 Live at **https://besdoth.github.io/Louise-Dove-Hair/**
 
 `vite.config.ts` sets `base: '/Louise-Dove-Hair/'` because the site is served
