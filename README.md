@@ -49,6 +49,19 @@ Defined in `src/index.css`, applied with per-element `animationDelay`.
 `prefers-reduced-motion: reduce` collapses every animation and transition to
 0.01ms with no delay.
 
+## Deploying
+
+Pushing to the default branch builds the site and publishes it to GitHub Pages
+via `.github/workflows/deploy-pages.yml`.
+
+Live at **https://besdoth.github.io/Louise-Dove-Hair/**
+
+`vite.config.ts` sets `base: '/Louise-Dove-Hair/'` because the site is served
+from a repo subpath. Adding a custom domain later means changing that to `'/'`.
+
+GitHub Pages only serves public repositories on the free plan — a private repo
+needs GitHub Pro or above.
+
 ## Files
 
 - `src/site.ts` — every string and asset URL the hero renders. **Rebranding the
