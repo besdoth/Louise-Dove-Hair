@@ -1,11 +1,11 @@
-# Marcus — Bennet
+# Louise Dove Hair
 
 A single full-viewport editorial hero: full-bleed background, a giant scrolling
 name, and a cutout portrait layered on top of it so the letters read behind the
 subject. Black/cream, no cards, no scroll.
 
-Built to a pixel-level spec — asset URLs, copy, spacing, z-order, timings and
-font are all fixed by that spec.
+Built to a pixel-level spec — spacing, z-order, timings and font are all fixed
+by that spec; the copy is branded for Louise Dove Hair.
 
 ## Stack
 
@@ -26,7 +26,7 @@ npm run lint
 | Layer            | z         | Content                          |
 | ---------------- | --------- | -------------------------------- |
 | BG image         | default   | full-bleed background            |
-| Marquee name     | `z-10`    | scrolling “Marcus — Bennet”      |
+| Marquee name     | `z-10`    | scrolling “Louise — Dove”        |
 | Cream rule       | `z-10`    | horizontal line above the footer |
 | Footer           | `sm:z-10` | desktop: under the portrait      |
 | Front portrait   | `z-20`    | cutout over the marquee          |

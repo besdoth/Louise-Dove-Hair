@@ -3,22 +3,29 @@
  * Rebranding the page is an edit to this file alone.
  */
 
-export const BRAND = 'Marcus'
-export const YEAR = '2025'
+export const BRAND = 'Louise Dove'
+export const YEAR = '2026'
 
 /** Marquee text: U+2014 em dash (&mdash;) + trailing U+00A0 (&nbsp;), written as escapes. */
-export const MARQUEE_TEXT = 'Marcus \u2014 Bennet\u00A0'
+export const MARQUEE_TEXT = 'Louise \u2014 Dove\u00A0'
 
-export const NAV_LINKS = ['Story', 'Jobs', 'Message'] as const
-export const SOCIAL_LINKS = ['Instagram', 'TikTok', 'YouTube'] as const
+export const NAV_LINKS = ['Story', 'Services', 'Book'] as const
+
+export type SocialLink = { label: string; href: string }
+
+export const SOCIAL_LINKS: readonly SocialLink[] = [
+  { label: 'Instagram', href: 'https://www.instagram.com/louisedovehair/' },
+  { label: 'TikTok', href: '#' },
+  { label: 'Pinterest', href: '#' },
+]
 
 export const FOOTER_LEFT = [
-  'Visuals Composer',
-  'Digital Crafter',
-  'Obsessed by The Office',
+  'Hair Stylist',
+  'Colour Specialist',
+  'Obsessed with good hair',
 ] as const
 
-export const FOOTER_RIGHT = ['A homage to', 'Marcus Holloway'] as const
+export const FOOTER_RIGHT = ['A studio for', 'Considered hair'] as const
 
 export const DRAWER_LABELS = {
   nav: 'Site Index',

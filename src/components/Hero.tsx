@@ -15,6 +15,10 @@ import {
 /** Shared easing for the drawer + hamburger morph. */
 const EASE = 'cubic-bezier(0.76, 0, 0.24, 1)'
 
+/** Off-site links open in a new tab; the unset '#' placeholders do not. */
+const external = (href: string) =>
+  href.startsWith('http') ? { target: '_blank', rel: 'noreferrer noopener' } : null
+
 export default function Hero() {
   const [open, setOpen] = useState(false)
 
@@ -116,10 +120,11 @@ export default function Hero() {
           </nav>
 
           <nav className="flex flex-col gap-0.5 text-sm">
-            {SOCIAL_LINKS.map((label, i) => (
+            {SOCIAL_LINKS.map(({ label, href }, i) => (
               <a
                 key={label}
-                href="#"
+                href={href}
+                {...external(href)}
                 className="anim-fade-up text-cream transition-opacity duration-300 hover:opacity-60"
                 style={{ animationDelay: `${1150 + i * 80}ms` }}
               >
@@ -203,10 +208,11 @@ export default function Hero() {
         </p>
 
         <nav className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-          {SOCIAL_LINKS.map((label, i) => (
+          {SOCIAL_LINKS.map(({ label, href }, i) => (
             <a
               key={label}
-              href="#"
+              href={href}
+              {...external(href)}
               tabIndex={open ? 0 : -1}
               className="font-hn text-sm text-cream transition-all duration-500"
               style={{
